@@ -2,14 +2,18 @@
   "name": "weather-cli",
   "version": "1.0.0",
   "private": false,
+  "type": "module",
   "description": "CLI for getting weather",
-  "main": "index.js",
-  "bin": "./index.js",
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js"
+  },
   "engines": {
     "node": ">14"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node weather.js",
+    "dev": "nodemon weather.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -28,5 +32,8 @@
   },
   "bugs": {
     "url": "https://google.com"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
   }
 }
