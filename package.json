@@ -1,5 +1,5 @@
 {
-  "name": "weather-cli",
+  "name": "weather-cli-enokin",
   "version": "1.0.0",
   "private": false,
   "type": "module",
@@ -25,13 +25,13 @@
   "devDependencies": {
     "nodemon": "^2.0.19"
   },
-  "homepage": "https://google.com",
+  "homepage": "https://github.com/StarkOne/weather-cli",
   "repository": {
     "type": "git",
-    "url": "https://google.com"
+    "url": "https://github.com/StarkOne/weather-cli"
   },
   "bugs": {
-    "url": "https://google.com"
+    "url": "https://github.com/StarkOne/weather-cli"
   },
   "dependencies": {
     "axios": "^0.27.2",
