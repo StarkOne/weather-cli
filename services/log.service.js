@@ -2,11 +2,11 @@ import chalk from 'chalk';
 import dedent from 'dedent-js';
 
 const pringError = (error) => {
-  console.log(chalk.bgRed('ERROR') + ' ' + error);
+  console.log(chalk.bgRed(' ERROR ') + ' ' + error);
 };
 
 const pringSuccess = (message) => {
-  console.log(chalk.bgGreen('SUCCESS') + ' ' + message);
+  console.log(chalk.bgGreen(' SUCCESS ') + ' ' + message);
 };
 
 const pringHelp = () => {
@@ -21,4 +21,16 @@ const pringHelp = () => {
   );
 };
 
-export { pringError, pringSuccess, pringHelp };
+const printWeather = (res, icon) => {
+  console.log(
+    dedent(`
+    ${chalk.bgYellow(' WEATHER ')} Погода в городе ${res.name}
+    ${icon} ${res.weather[0].description}
+    Температура: ${res.main.temp} (ощущается как ${res.main.feels_like})
+    Влажность: ${res.main.humidity}
+    Скорость ветра: ${res.wind.speed}
+  `)
+  );
+};
+
+export { pringError, pringSuccess, pringHelp, printWeather };
